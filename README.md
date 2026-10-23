@@ -172,6 +172,18 @@ node scripts/run.mjs doctor
 
 </details>
 
+### 🪪 一句话查询一卡通余额
+
+直接问“我的一卡通还剩多少钱”，助手复用登录态，从官网读取当前账户余额。
+
+<p align="center"><img src="assets/readme/campus-card-balance.png" alt="用一句话查询一卡通余额，助手返回当前账户金额" width="960"></p>
+
+### 🧾 看懂半年消费都花在哪里
+
+指定时间范围，按消费地点汇总金额、笔数和占比，再看每个月的变化。充值与实际消费分开统计，让流水变成一份清晰的消费总结。
+
+<p align="center"><img src="assets/readme/campus-card-spending.png" alt="分析近六个月一卡通消费，汇总餐饮与班车支出及各消费地点的金额和笔数" width="960"></p>
+
 ## 登录与隐私
 
 - 🔐 **认证在本机完成**：由本地程序直接访问学校服务，学校登录凭据保存在你的电脑上，无需开发者中转服务器。
