@@ -1,9 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { allowedApiUrl, CANVAS, getJson, getList, nextPage, verifyCanvas } from '../skills/tongji-campus/scripts/core/canvas-http.mjs';
-import { assignments, courses, normalizeAssignment, normalizeCourse, upcoming } from '../skills/tongji-campus/scripts/adapters/canvas.mjs';
-import { failure } from '../skills/tongji-campus/scripts/core/errors.mjs';
+import { allowedApiUrl, CANVAS, getJson, getList, nextPage, verifyCanvas } from '../skills/tongji-online/scripts/core/canvas-http.mjs';
+import { assignments, courses, normalizeAssignment, normalizeCourse, upcoming } from '../skills/tongji-online/scripts/adapters/canvas.mjs';
+import { failure } from '../skills/tongji-online/scripts/core/errors.mjs';
 import { fakeRequest } from './helpers.mjs';
 
 const fixture = JSON.parse(await readFile(new URL('./fixtures/canvas.json', import.meta.url), 'utf8'));

@@ -1,6 +1,6 @@
 {
-  "name": "tongji-campus",
-  "version": "0.2.2",
+  "name": "tongji-online",
+  "version": "0.3.0",
   "private": true,
   "type": "module",
   "description": "同济大学 Canvas、图书馆与本科教务本地认证和只读查询 skill",

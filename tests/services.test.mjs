@@ -1,10 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { serviceJson } from '../skills/tongji-campus/scripts/core/service-http.mjs';
-import { privateCredentials } from '../skills/tongji-campus/scripts/core/services.mjs';
-import { normalizeBook, normalizeHolding, normalizeLoan, search, item, loans } from '../skills/tongji-campus/scripts/adapters/library.mjs';
-import { normalizeWeeks, normalizeTimetable, timetable } from '../skills/tongji-campus/scripts/adapters/education.mjs';
-import { parseArgs } from '../skills/tongji-campus/scripts/run.mjs';
+import { serviceJson } from '../skills/tongji-online/scripts/core/service-http.mjs';
+import { privateCredentials } from '../skills/tongji-online/scripts/core/services.mjs';
+import { normalizeBook, normalizeHolding, normalizeLoan, search, item, loans } from '../skills/tongji-online/scripts/adapters/library.mjs';
+import { normalizeWeeks, normalizeTimetable, timetable } from '../skills/tongji-online/scripts/adapters/education.mjs';
+import { parseArgs } from '../skills/tongji-online/scripts/run.mjs';
 import { fakeRequest } from './helpers.mjs';
 
 const libResponse=data=>({data:{success:true,errCode:200,data}});

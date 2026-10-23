@@ -67,7 +67,7 @@ export function parseArgs(args) {
 }
 
 export const help = {
-  name: 'tongji-campus', version: '0.2.2', readOnly: true,
+  name: 'tongji-online', version: '0.3.0', readOnly: true,
   commands: [
     'doctor', 'auth login [--service canvas|library|education] [--method qr|password] [--browser auto|chrome|edge] [--timeout 600]',
     'auth status [--service canvas|library|education]', 'auth logout',

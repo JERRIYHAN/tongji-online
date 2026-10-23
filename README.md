@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="assets/readme/hero.png" alt="同济校园助手：查询 Canvas 作业、预约图书馆座位与研习室、分析学分、查看社会实践、获取电子文件" width="100%">
+  <img src="assets/readme/hero.png" alt="Tongji Online · 同济校园助手：查询 Canvas 作业、预约图书馆座位与研习室、分析学分、查看社会实践、获取电子文件" width="100%">
 </p>
 
 <p align="center">
-  <a href="https://github.com/JERRIYHAN/tongji-cli/releases"><img src="https://img.shields.io/github/v/release/JERRIYHAN/tongji-cli?color=3e5a6b&amp;label=release" alt="Latest release"></a>
+  <a href="https://github.com/JERRIYHAN/tongji-online/releases"><img src="https://img.shields.io/github/v/release/JERRIYHAN/tongji-online?color=3e5a6b&amp;label=release" alt="Latest release"></a>
   <img src="https://img.shields.io/badge/Node.js-22%2B-708c78" alt="Node.js 22 or newer">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-b5a28a" alt="MIT License"></a>
-  <a href="https://github.com/JERRIYHAN/tongji-cli/actions/workflows/ci.yml"><img src="https://github.com/JERRIYHAN/tongji-cli/actions/workflows/ci.yml/badge.svg" alt="Validation"></a>
+  <a href="https://github.com/JERRIYHAN/tongji-online/actions/workflows/ci.yml"><img src="https://github.com/JERRIYHAN/tongji-online/actions/workflows/ci.yml/badge.svg" alt="Validation"></a>
 </p>
 
 <p align="center">
@@ -21,7 +21,7 @@
 
 ## 这是什么
 
-给 AI 助手装上 **tongji-campus 技能包**，把校园网站的入口和操作方法交给它，你直接说需求。常用查询由本地脚本完成，更多功能由 Agent 沿着网站导航继续探索。
+给 AI 助手装上 **tongji-online 技能包**，把校园网站的入口和操作方法交给它，你直接说需求。常用查询由本地脚本完成，更多功能由 Agent 沿着网站导航继续探索。
 
 ## 快速开始
 
@@ -32,23 +32,23 @@
 复制下面这句话，发送给你使用的 AI 助手：
 
 ```text
-请从 https://github.com/JERRIYHAN/tongji-cli/tree/main/skills/tongji-campus 下载并安装 tongji-campus 技能到你使用的 Skill 目录，安装所需依赖并运行环境检查。
+请从 https://github.com/JERRIYHAN/tongji-online/tree/main/skills/tongji-online 下载并安装 tongji-online 技能到你使用的 Skill 目录，安装所需依赖并运行环境检查。
 ```
 
 **方式 B：从仓库安装到 Codex**
 
 ```bash
-git clone https://github.com/JERRIYHAN/tongji-cli.git
-cd tongji-cli
+git clone https://github.com/JERRIYHAN/tongji-online.git
+cd tongji-online
 npm run install:skill
 ```
 
-安装程序会自动复制技能并安装依赖，默认安装到 `~/.codex/skills/tongji-campus`，也支持通过 `CODEX_HOME` 指定位置。
+安装程序会自动复制技能并安装依赖，默认安装到 `~/.codex/skills/tongji-online`，也支持通过 `CODEX_HOME` 指定位置。
 
 <details>
 <summary>📥 也可以下载 ZIP 安装</summary>
 
-从 [Releases](https://github.com/JERRIYHAN/tongji-cli/releases/latest) 下载 `tongji-campus-版本号.zip`，解压后将 `tongji-campus` 文件夹放进助手的 Skill 目录，在该文件夹运行：
+从 [Releases](https://github.com/JERRIYHAN/tongji-online/releases/latest) 下载 `tongji-online-版本号.zip`，解压后将 `tongji-online` 文件夹放进助手的 Skill 目录，在该文件夹运行：
 
 ```bash
 npm ci --ignore-scripts
@@ -62,7 +62,7 @@ node scripts/run.mjs doctor
 重新打开会话或刷新技能列表，然后直接提问：
 
 ```text
-使用 tongji-campus，帮我查看未来七天截止的作业。
+使用 tongji-online，帮我查看未来七天截止的作业。
 ```
 
 首次使用时，助手会打开同济统一认证页面，请在页面扫码。之后自动复用有效登录态。
@@ -195,11 +195,11 @@ node scripts/run.mjs doctor
 
 | 系统 | 默认目录 |
 | --- | --- |
-| macOS | `~/Library/Application Support/tongji-campus/` |
-| Windows | `%LOCALAPPDATA%/tongji-campus/` |
-| Linux | `$XDG_DATA_HOME/tongji-campus/`，未设置时使用 `~/.local/share/tongji-campus/` |
+| macOS | `~/Library/Application Support/tongji-online/` |
+| Windows | `%LOCALAPPDATA%/tongji-online/` |
+| Linux | `$XDG_DATA_HOME/tongji-online/`，未设置时使用 `~/.local/share/tongji-online/` |
 
-通过 `TONGJI_CAMPUS_HOME` 可以指定私有目录；助手和终端使用相同设置即可共享登录态。
+通过 `TONGJI_ONLINE_HOME` 可以指定私有目录；助手和终端使用相同设置即可共享登录态。旧版升级会沿用已有会话目录，并兼容原配置变量。
 
 </details>
 
@@ -233,7 +233,7 @@ node scripts/run.mjs auth login --service library
 node scripts/run.mjs auth login --service education
 ```
 
-命令返回 JSON 格式数据，方便 Agent 和其他程序继续处理。完整参数与结果说明见 `help` 和 [Skill 入口](skills/tongji-campus/SKILL.md)。
+命令返回 JSON 格式数据，方便 Agent 和其他程序继续处理。完整参数与结果说明见 `help` 和 [Skill 入口](skills/tongji-online/SKILL.md)。
 
 </details>
 
@@ -243,14 +243,14 @@ node scripts/run.mjs auth login --service education
 
 | 资料 | 内容 |
 | --- | --- |
-| [Skill 入口](skills/tongji-campus/SKILL.md) | 任务路由、命令、认证和探索方法 |
-| [Canvas](skills/tongji-campus/references/canvas-navigation.md) | 全局菜单、课程栏目及扩展读取 |
-| [座位](skills/tongji-campus/references/library-seats.md) · [研习室](skills/tongji-campus/references/library-study-rooms.md) | 两类空间的查询、规则和预约链路 |
-| [本科教务](skills/tongji-campus/references/education-navigation.md) | 培养、选课、考试、成绩等菜单索引 |
-| [官方电子文件](skills/tongji-campus/references/official-documents.md) | 文件目录和获取方式 |
-| [一网通办](skills/tongji-campus/references/service-hall.md) | 校园办事入口与服务目录 |
-| [一卡通](skills/tongji-campus/references/campus-card.md) | 服务中心七项功能、余额与流水查询、宿舍缴费入口 |
-| [体育场馆](skills/tongji-campus/references/stadium.md) | 场馆、时段、规则和订单流程 |
+| [Skill 入口](skills/tongji-online/SKILL.md) | 任务路由、命令、认证和探索方法 |
+| [Canvas](skills/tongji-online/references/canvas-navigation.md) | 全局菜单、课程栏目及扩展读取 |
+| [座位](skills/tongji-online/references/library-seats.md) · [研习室](skills/tongji-online/references/library-study-rooms.md) | 两类空间的查询、规则和预约链路 |
+| [本科教务](skills/tongji-online/references/education-navigation.md) | 培养、选课、考试、成绩等菜单索引 |
+| [官方电子文件](skills/tongji-online/references/official-documents.md) | 文件目录和获取方式 |
+| [一网通办](skills/tongji-online/references/service-hall.md) | 校园办事入口与服务目录 |
+| [一卡通](skills/tongji-online/references/campus-card.md) | 服务中心七项功能、余额与流水查询、宿舍缴费入口 |
+| [体育场馆](skills/tongji-online/references/stadium.md) | 场馆、时段、规则和订单流程 |
 | [贡献指南](CONTRIBUTING.md) | 探索新网站、反馈问题、提交改进 |
 
 <details>

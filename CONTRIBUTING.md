@@ -10,7 +10,7 @@
 2. 观察页面实际请求，确认地址、方法、参数、业务成功码和分页；方法是 POST 并不代表一定写入，GET 也可能改变状态。
 3. 先通过目录、配置、详情等读取理解功能；用户需要办理时，再按其授权完成提交并核对结果。
 4. 新读取至少核对一份实际结果，理解各字段含义。目录数量和实时空闲数、房间编号和馆舍编号等分别记录。
-5. 把入口、参数、最短步骤、结果判断和真实避坑点写入 `skills/tongji-campus/references/`，并在 `SKILL.md` 或相关子文件中链接。
+5. 把入口、参数、最短步骤、结果判断和真实避坑点写入 `skills/tongji-online/references/`，并在 `SKILL.md` 或相关子文件中链接。
 
 文档写给下一位使用者：保留可复用的操作知识，公共目录标注更新时间。个人账号测试经历、实际课程成绩、私人路径、认证数据和临时日志保留在本地。
 
@@ -19,15 +19,15 @@
 Fork 仓库后创建分支，围绕一个功能修改：
 
 ```bash
-git clone https://github.com/你的用户名/tongji-cli.git
-cd tongji-cli
+git clone https://github.com/你的用户名/tongji-online.git
+cd tongji-online
 git switch -c improve-campus-workflow
 ```
 
-需要运行浏览器辅助或校园命令时，在 `skills/tongji-campus` 安装依赖：
+需要运行浏览器辅助或校园命令时，在 `skills/tongji-online` 安装依赖：
 
 ```bash
-cd skills/tongji-campus
+cd skills/tongji-online
 npm ci --ignore-scripts
 ```
 

@@ -3,10 +3,10 @@ import assert from 'node:assert/strict';
 import { mkdtemp, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { login } from '../skills/tongji-campus/scripts/core/auth.mjs';
-import { CampusError } from '../skills/tongji-campus/scripts/core/errors.mjs';
-import { prepareState, readSession } from '../skills/tongji-campus/scripts/core/state.mjs';
-import { LOGIN_URLS } from '../skills/tongji-campus/scripts/core/services.mjs';
+import { login } from '../skills/tongji-online/scripts/core/auth.mjs';
+import { CampusError } from '../skills/tongji-online/scripts/core/errors.mjs';
+import { prepareState, readSession } from '../skills/tongji-online/scripts/core/state.mjs';
+import { LOGIN_URLS } from '../skills/tongji-online/scripts/core/services.mjs';
 import { fakeRequest } from './helpers.mjs';
 
 const state={cookies:[],origins:[],serviceData:{

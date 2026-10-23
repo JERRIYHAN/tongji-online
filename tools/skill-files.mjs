@@ -3,7 +3,7 @@ import { dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 export const projectRoot = dirname(dirname(fileURLToPath(import.meta.url)));
-export const skillRoot = join(projectRoot, 'skills', 'tongji-campus');
+export const skillRoot = join(projectRoot, 'skills', 'tongji-online');
 
 // Positive allowlist: state, tests, node_modules and project planning can never enter a release.
 export async function skillFiles(root = skillRoot) {

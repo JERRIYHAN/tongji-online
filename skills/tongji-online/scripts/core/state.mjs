@@ -1,18 +1,24 @@
 import { chmod, lstat, mkdir, open, readFile, rename, rm } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
 import { homedir, platform } from 'node:os';
 import { dirname, isAbsolute, join, resolve } from 'node:path';
 import { randomUUID } from 'node:crypto';
 import { CampusError } from './errors.mjs';
 import { SCHOOL_HOSTS, privateCredentials } from './services.mjs';
 
-export function stateDirectory(env = process.env) {
-  if (env.TONGJI_CAMPUS_HOME) {
-    if (!isAbsolute(env.TONGJI_CAMPUS_HOME)) throw new CampusError('STATE_UNSAFE');
-    return resolve(env.TONGJI_CAMPUS_HOME);
+export function stateDirectory(env = process.env, { home = homedir(), os = platform() } = {}) {
+  const configured = env.TONGJI_ONLINE_HOME || env.TONGJI_CAMPUS_HOME;
+  if (configured) {
+    if (!isAbsolute(configured)) throw new CampusError('STATE_UNSAFE');
+    return resolve(configured);
   }
-  if (platform() === 'darwin') return join(homedir(), 'Library', 'Application Support', 'tongji-campus');
-  if (platform() === 'win32') return join(env.LOCALAPPDATA || join(homedir(), 'AppData', 'Local'), 'tongji-campus');
-  return join(env.XDG_DATA_HOME || join(homedir(), '.local', 'share'), 'tongji-campus');
+  const parent = os === 'darwin' ? join(home, 'Library', 'Application Support')
+    : os === 'win32' ? env.LOCALAPPDATA || join(home, 'AppData', 'Local')
+    : env.XDG_DATA_HOME || join(home, '.local', 'share');
+  const current = join(parent, 'tongji-online');
+  const legacy = join(parent, 'tongji-campus');
+  // Reuse the same state and lock when upgrading an existing installation.
+  return !existsSync(current) && existsSync(legacy) ? legacy : current;
 }
 
 export async function exists(path) {

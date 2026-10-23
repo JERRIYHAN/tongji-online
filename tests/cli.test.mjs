@@ -4,7 +4,7 @@ import { mkdtemp, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
-import { main, parseArgs } from '../skills/tongji-campus/scripts/run.mjs';
+import { main, parseArgs } from '../skills/tongji-online/scripts/run.mjs';
 
 test('login defaults to QR, password is a presentation preference, no secrets accepted', () => {
   assert.equal(parseArgs(['auth','login']).options.method,'qr');
@@ -19,7 +19,7 @@ test('login defaults to QR, password is a presentation preference, no secrets ac
 });
 
 test('missing session is an actionable failure; status does not claim a login', async t => {
-  const root = await mkdtemp(join(tmpdir(),'tongji-cli-'));
+  const root = await mkdtemp(join(tmpdir(),'tongji-online-'));
   t.after(()=>rm(root,{recursive:true,force:true}));
   let raw='';
   const runtime={home:root,stdout:{write:s=>{raw+=s;}},stderr:{write:()=>{}}};
@@ -31,7 +31,7 @@ test('missing session is an actionable failure; status does not claim a login', 
 });
 
 test('process output is JSON and never repeats invalid secret arguments', () => {
-  const path = new URL('../skills/tongji-campus/scripts/run.mjs',import.meta.url);
+  const path = new URL('../skills/tongji-online/scripts/run.mjs',import.meta.url);
   const result = spawnSync(process.execPath,[path.pathname,'auth','login','--password','PRIVATE_PASSWORD'],{encoding:'utf8'});
   assert.equal(result.status,1);
   assert.equal(JSON.parse(result.stdout).error.code,'INVALID_ARGUMENT');

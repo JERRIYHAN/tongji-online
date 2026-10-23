@@ -1,14 +1,14 @@
 {
-  "name": "tongji-campus-dev",
-  "version": "0.2.2",
+  "name": "tongji-online-dev",
+  "version": "0.3.0",
   "private": true,
   "type": "module",
-  "description": "同济校园助手开发与验证工具；可分发运行包位于 skills/tongji-campus",
+  "description": "同济校园助手开发与验证工具；可分发运行包位于 skills/tongji-online",
   "engines": {
     "node": ">=22"
   },
   "scripts": {
-    "campus": "node skills/tongji-campus/scripts/run.mjs",
+    "online": "node skills/tongji-online/scripts/run.mjs",
     "test": "node --test",
     "check": "node tools/check.mjs",
     "build": "node tools/package.mjs",

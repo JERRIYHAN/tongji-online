@@ -6,7 +6,7 @@ export const messages = {
   SESSION_BUSY: ['另一个校园助手操作仍在使用会话。', '等待前一操作结束，不要同时启动多个登录或查询。'],
   SESSION_STALE: ['发现异常退出留下的会话操作锁。', '确认本工具进程已经结束后，删除会话目录中的 operation.lock，再重试。不要删除 session.json。'],
   STATE_UNSAFE: ['会话目录的类型或权限不符合要求。', '使用独立、非符号链接且仅当前用户可访问的本地目录。'],
-  STATE_IO: ['无法读写本地会话。', '检查本地目录权限；受限环境可设置 TONGJI_CAMPUS_HOME 到允许写入的专属目录。'],
+  STATE_IO: ['无法读写本地会话。', '检查本地目录权限；受限环境可设置 TONGJI_ONLINE_HOME 到允许写入的专属目录。'],
   LOGIN_REQUIRED: ['当前服务需要建立或恢复登录会话。', '运行 auth login --service canvas、library 或 education；会先验证已保存的会话，必要时打开学校认证页面。'],
   LOGIN_TIMEOUT: ['尚未在等待时间内完成登录。', '重新运行 auth login；二维码过期时在学校页面刷新。'],
   LOGIN_CANCELLED: ['登录窗口已关闭，尚未验证成功。', '需要查询时重新运行 auth login。'],

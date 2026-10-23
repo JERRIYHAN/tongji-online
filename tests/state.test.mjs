@@ -3,7 +3,40 @@ import assert from 'node:assert/strict';
 import { mkdtemp, mkdir, readFile, rm, stat, symlink, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { authFile, clearSession, prepareState, readSession, saveSession, withStateLock } from '../skills/tongji-campus/scripts/core/state.mjs';
+import { authFile, clearSession, prepareState, readSession, saveSession, stateDirectory, withStateLock } from '../skills/tongji-online/scripts/core/state.mjs';
+
+test('renaming preserves configured state and prioritizes the new environment variable', () => {
+  const current = join(tmpdir(), 'tongji-online-configured');
+  const legacy = join(tmpdir(), 'tongji-legacy-configured');
+  assert.equal(stateDirectory({ TONGJI_ONLINE_HOME: current, TONGJI_CAMPUS_HOME: legacy }), current);
+  assert.equal(stateDirectory({ TONGJI_CAMPUS_HOME: legacy }), legacy);
+  assert.throws(() => stateDirectory({ TONGJI_ONLINE_HOME: 'relative', TONGJI_CAMPUS_HOME: legacy }), { code: 'STATE_UNSAFE' });
+  assert.throws(() => stateDirectory({ TONGJI_CAMPUS_HOME: 'relative' }), { code: 'STATE_UNSAFE' });
+});
+
+test('new installations use the new name while upgrades retain the existing state and lock', async t => {
+  const root = await mkdtemp(join(tmpdir(), 'tongji-rename-'));
+  t.after(() => rm(root, { recursive: true, force: true }));
+  for (const os of ['darwin', 'win32', 'linux']) {
+    const home = join(root, os);
+    const parent = os === 'darwin' ? join(home, 'Library', 'Application Support')
+      : os === 'win32' ? join(home, 'AppData', 'Local')
+      : join(home, '.local', 'share');
+    const current = join(parent, 'tongji-online');
+    const legacy = join(parent, 'tongji-campus');
+    assert.equal(stateDirectory({}, { home, os }), current);
+    await prepareState(legacy);
+    await saveSession(legacy, { cookies: [], origins: [] });
+    const reused = stateDirectory({}, { home, os });
+    assert.equal(reused, legacy);
+    assert.deepEqual(await readSession(reused), { cookies: [], origins: [], serviceData: {} });
+    await withStateLock(legacy, async () => {
+      await assert.rejects(withStateLock(reused, async () => {}), { code: 'SESSION_BUSY' });
+    });
+    await mkdir(current);
+    assert.equal(stateDirectory({}, { home, os }), current);
+  }
+});
 
 test('state is private, excludes third-party origins/cookies, and survives a new read', async t => {
   const root = await mkdtemp(join(tmpdir(), 'tongji-test-'));
