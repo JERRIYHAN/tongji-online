@@ -1,6 +1,6 @@
 ---
 name: tongji-campus
-description: 查询同济大学 Canvas 课程作业、图书馆馆藏借阅、座位与研习室、本科课表及实践成绩，定位官方电子文件、一网通办和体育场馆预约功能；学校统一认证在用户本机完成，支持按任务探索校园网站并积累可复用流程。
+description: 查询同济大学 Canvas 课程作业、图书馆馆藏借阅、座位与研习室、本科课表及实践成绩，查询一卡通余额与消费流水，定位官方电子文件、一网通办和体育场馆预约功能；学校统一认证在用户本机完成，支持按任务探索校园网站并积累可复用流程。
 ---
 
 # 同济校园助手
@@ -27,6 +27,7 @@ Agent 在宿主权限允许时直接执行登录命令；仅在窗口需要本�
 | `1.tongji.edu.cn` | 本科课表、培养计划、成绩 | [教务导航](references/education-navigation.md)、[课表](references/education.md)、[实践成绩](references/education-practice.md) |
 | `zzfw.tongji.edu.cn` | 官方成绩单、在读证明等电子文件 | [文件目录与获取](references/official-documents.md) |
 | `all.tongji.edu.cn` | 搜索校园服务和办事入口 | [办事大厅](references/service-hall.md) |
+| `yikatong.tongji.edu.cn/ppage/service` | 一卡通余额、消费流水、宿舍缴费及卡片服务 | [一卡通服务中心](references/campus-card.md) |
 | `stadium.tongji.edu.cn` | 体育场馆、时段与预约 | [体育场馆](references/stadium.md) |
 
 已有命令优先使用；其他功能按子文档进入官网，结合当前页面继续操作。资料里的目录帮助定位，实时名额、开放期和资格由目标系统给出。

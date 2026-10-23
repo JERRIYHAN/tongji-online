@@ -81,7 +81,10 @@ node scripts/run.mjs doctor
 | 🎓 本科教务 | 看课表、查成绩、分析培养计划与学分缺口、核对社会实践完成情况 |
 | 📄 官方电子文件 | 找到中英文成绩单、在读证明等文件及获取入口 |
 | 🏫 一网通办 | 搜索校园事项，定位办事指南和目标系统 |
+| 🪪 一卡通 | 查询校园卡余额与消费流水，定位宿舍缴费、挂失／解挂和查询密码修改入口 |
 | 🏸 体育场馆 | 按校区和运动查找场馆，查询预约时段、办理预约及查看订单 |
+
+🪪 也可以直接说：“帮我查一下校园卡余额，再看看这个月的消费流水。”
 
 ## 使用案例
 
@@ -234,6 +237,7 @@ node scripts/run.mjs auth login --service education
 | [本科教务](skills/tongji-campus/references/education-navigation.md) | 培养、选课、考试、成绩等菜单索引 |
 | [官方电子文件](skills/tongji-campus/references/official-documents.md) | 文件目录和获取方式 |
 | [一网通办](skills/tongji-campus/references/service-hall.md) | 校园办事入口与服务目录 |
+| [一卡通](skills/tongji-campus/references/campus-card.md) | 服务中心七项功能、余额与流水查询、宿舍缴费入口 |
 | [体育场馆](skills/tongji-campus/references/stadium.md) | 场馆、时段、规则和订单流程 |
 | [贡献指南](CONTRIBUTING.md) | 探索新网站、反馈问题、提交改进 |
 

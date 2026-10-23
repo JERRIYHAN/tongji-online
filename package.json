@@ -1,6 +1,6 @@
 {
   "name": "tongji-campus-dev",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "private": true,
   "type": "module",
   "description": "同济校园助手开发与验证工具；可分发运行包位于 skills/tongji-campus",
