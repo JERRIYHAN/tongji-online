@@ -1,0 +1,19 @@
+{
+  "profile": { "id": 999, "name": "不应输出的姓名", "login_id": "PRIVATE_STUDENT_ID", "primary_email": "PRIVATE_EMAIL" },
+  "courses": [
+    { "id": 101, "name": "机器学习", "course_code": "AI101", "term": { "name": "2026 秋季" }, "enrollments": [{ "grades": { "current_score": "PRIVATE_GRADE" } }], "access_token": "PRIVATE_TOKEN" },
+    { "id": 202, "name": "算法设计", "course_code": "CS202", "term": { "name": "2026 秋季" } }
+  ],
+  "assignments": {
+    "101": [
+      { "id": 11, "course_id": 101, "name": "决策树实验", "due_at": "2026-10-22T16:00:00Z", "submission": { "workflow_state": "submitted", "score": "PRIVATE_SCORE", "body": "PRIVATE_ANSWER", "user_id": "PRIVATE_STUDENT_ID" }, "description": "PRIVATE_DESCRIPTION", "html_url": "https://example.invalid/?access_token=PRIVATE_TOKEN" },
+      { "id": 12, "course_id": 101, "name": "课程阅读", "due_at": null, "submission": { "workflow_state": "unsubmitted" } },
+      { "id": 13, "course_id": 101, "name": "区间上界作业", "due_at": "2026-10-29T04:00:00Z" },
+      { "id": 14, "course_id": 101, "name": "已过期作业", "due_at": "2026-10-22T03:59:59Z" }
+    ],
+    "202": [
+      { "id": 21, "course_id": 202, "name": "动态规划练习", "due_at": "2026-10-23T23:59:00+08:00", "submission": { "workflow_state": "unsubmitted" } },
+      { "id": 22, "course_id": 202, "name": "区间下界作业", "due_at": "2026-10-22T04:00:00Z" }
+    ]
+  }
+}

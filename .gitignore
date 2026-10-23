@@ -1,0 +1,22 @@
+node_modules/
+.cache/
+dist/
+output/
+.DS_Store
+*.log
+playwright/.auth/
+browser-profile/
+.env
+.env.*
+!.env.example
+
+# Local working notes and original screenshots; publish curated documentation only.
+/示例/
+/findings.md
+/progress.md
+/task_plan.md
+/docs/design-proposal.zh-CN.md
+session.json
+operation.lock
+*.har
+trace.zip

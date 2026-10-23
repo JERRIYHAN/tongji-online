@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="350" viewBox="0 0 1200 350" role="img" aria-labelledby="title desc">
+  <title id="title">Tongji Campus — Skill-first campus assistant</title>
+  <desc id="desc">A quiet blue and sage banner connecting campus tasks, local authentication and an AI agent.</desc>
+  <defs>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#d6dcd9" stroke-width=".7"/></pattern>
+    <linearGradient id="wash" x2="1" y2="1"><stop stop-color="#f4f5f1"/><stop offset="1" stop-color="#e6ece9"/></linearGradient>
+  </defs>
+  <rect width="1200" height="350" rx="22" fill="url(#wash)"/>
+  <rect x="736" width="464" height="350" fill="url(#grid)" opacity=".65"/>
+  <rect x="48" y="46" width="153" height="27" rx="13.5" fill="#3e5a6b"/>
+  <text x="124.5" y="64" fill="#fff" font-size="11" font-family="Arial,sans-serif" text-anchor="middle" letter-spacing="2">SKILL FIRST</text>
+  <text x="48" y="145" fill="#2d4350" font-size="60" font-weight="700" font-family="Arial,sans-serif" letter-spacing="-2">TONGJI CAMPUS</text>
+  <text x="51" y="186" fill="#5b6c70" font-size="19" font-family="Arial,sans-serif">Your campus. One conversation away.</text>
+  <g font-family="Arial,sans-serif" font-size="13">
+    <rect x="50" y="235" width="98" height="34" rx="8" fill="#d8e1dd"/><text x="99" y="257" fill="#3d5650" text-anchor="middle">Canvas</text>
+    <rect x="160" y="235" width="98" height="34" rx="8" fill="#dce3e8"/><text x="209" y="257" fill="#3e5669" text-anchor="middle">Library</text>
+    <rect x="270" y="235" width="123" height="34" rx="8" fill="#e5ded3"/><text x="331.5" y="257" fill="#6e6251" text-anchor="middle">Academics</text>
+    <rect x="405" y="235" width="142" height="34" rx="8" fill="#e1e1e4"/><text x="476" y="257" fill="#5b5a69" text-anchor="middle">Campus services</text>
+  </g>
+  <g fill="none" stroke="#6d8790" stroke-width="2">
+    <path d="M864 258V145a66 66 0 0 1 132 0v113M842 258h176M852 145h156M881 258v-96a49 49 0 0 1 98 0v96"/>
+    <path d="M930 192h111v-38h53" stroke-dasharray="5 7" opacity=".6"/>
+  </g>
+  <rect x="1007" y="203" width="133" height="73" rx="13" fill="#fff" stroke="#c7d4d2"/>
+  <circle cx="1032" cy="226" r="5" fill="#8ca99a"/>
+  <path d="m1051 241 11 9-11 9m23 0h28" fill="none" stroke="#4a6877" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="48" y="318" fill="#7a8989" font-size="10" font-family="Arial,sans-serif" letter-spacing="2">LOCAL AUTHENTICATION / STRUCTURED QUERIES / BROWSER WORKFLOWS</text>
+</svg>
