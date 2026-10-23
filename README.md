@@ -1,10 +1,6 @@
 <p align="center">
-  <img src="assets/readme/hero.svg" alt="Tongji Campus · 同济校园助手" width="100%">
+  <img src="assets/readme/hero.png" alt="同济校园助手：查询 Canvas 作业、预约图书馆座位与研习室、分析学分、查看社会实践、获取电子文件" width="100%">
 </p>
-
-<h1 align="center">同济校园助手</h1>
-
-<p align="center">用自然语言查作业、找座位、看学业进度，把校园网站变成 AI 助手可以使用的工具。</p>
 
 <p align="center">
   <a href="https://github.com/JERRIYHAN/tongji-cli/releases"><img src="https://img.shields.io/github/v/release/JERRIYHAN/tongji-cli?color=3e5a6b&amp;label=release" alt="Latest release"></a>
@@ -25,20 +21,7 @@
 
 ## 这是什么
 
-给 AI 助手装上这个 **Skill（技能包）**，就能用一句话查询同济校园信息、预约学习空间、整理学业进度。它把校园网站的入口和操作方法交给助手，你直接说需求。
-
-- 💬 **自然语言操作**：从“这周有什么作业”到“找一个四人桌的位子”，在对话里完成查询与办理。
-- 🔑 **本机登录，持续复用**：在同济页面扫码认证，有效登录态自动复用，学校凭据留在你的电脑上。
-- 🧩 **轻量安装，随用随扩展**：技能包包含操作指南和常用查询脚本，Agent 可以沿着已有流程探索更多校园服务。
-
-```text
-帮我看看未来七天有哪些 Canvas 作业，分别有什么要求。
-嘉定图书馆六楼现在有多少空位？
-明天下午找一间适合三个人讨论的研习室。
-我的培养计划还缺哪些类别的学分？
-帮我查看社会实践课的完成情况。
-找到官方英文成绩单的下载入口。
-```
+给 AI 助手装上 **tongji-campus 技能包**，把校园网站的入口和操作方法交给它，你直接说需求。常用查询由本地脚本完成，更多功能由 Agent 沿着网站导航继续探索。
 
 ## 快速开始
 

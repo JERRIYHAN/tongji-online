@@ -1,28 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="350" viewBox="0 0 1200 350" role="img" aria-labelledby="title desc">
-  <title id="title">Tongji Campus — Skill-first campus assistant</title>
-  <desc id="desc">A quiet blue and sage banner connecting campus tasks, local authentication and an AI agent.</desc>
-  <defs>
-    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#d6dcd9" stroke-width=".7"/></pattern>
-    <linearGradient id="wash" x2="1" y2="1"><stop stop-color="#f4f5f1"/><stop offset="1" stop-color="#e6ece9"/></linearGradient>
-  </defs>
-  <rect width="1200" height="350" rx="22" fill="url(#wash)"/>
-  <rect x="736" width="464" height="350" fill="url(#grid)" opacity=".65"/>
-  <rect x="48" y="46" width="153" height="27" rx="13.5" fill="#3e5a6b"/>
-  <text x="124.5" y="64" fill="#fff" font-size="11" font-family="Arial,sans-serif" text-anchor="middle" letter-spacing="2">SKILL FIRST</text>
-  <text x="48" y="145" fill="#2d4350" font-size="60" font-weight="700" font-family="Arial,sans-serif" letter-spacing="-2">TONGJI CAMPUS</text>
-  <text x="51" y="186" fill="#5b6c70" font-size="19" font-family="Arial,sans-serif">Your campus. One conversation away.</text>
-  <g font-family="Arial,sans-serif" font-size="13">
-    <rect x="50" y="235" width="98" height="34" rx="8" fill="#d8e1dd"/><text x="99" y="257" fill="#3d5650" text-anchor="middle">Canvas</text>
-    <rect x="160" y="235" width="98" height="34" rx="8" fill="#dce3e8"/><text x="209" y="257" fill="#3e5669" text-anchor="middle">Library</text>
-    <rect x="270" y="235" width="123" height="34" rx="8" fill="#e5ded3"/><text x="331.5" y="257" fill="#6e6251" text-anchor="middle">Academics</text>
-    <rect x="405" y="235" width="142" height="34" rx="8" fill="#e1e1e4"/><text x="476" y="257" fill="#5b5a69" text-anchor="middle">Campus services</text>
-  </g>
-  <g fill="none" stroke="#6d8790" stroke-width="2">
-    <path d="M864 258V145a66 66 0 0 1 132 0v113M842 258h176M852 145h156M881 258v-96a49 49 0 0 1 98 0v96"/>
-    <path d="M930 192h111v-38h53" stroke-dasharray="5 7" opacity=".6"/>
-  </g>
-  <rect x="1007" y="203" width="133" height="73" rx="13" fill="#fff" stroke="#c7d4d2"/>
-  <circle cx="1032" cy="226" r="5" fill="#8ca99a"/>
-  <path d="m1051 241 11 9-11 9m23 0h28" fill="none" stroke="#4a6877" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="48" y="318" fill="#7a8989" font-size="10" font-family="Arial,sans-serif" letter-spacing="2">LOCAL AUTHENTICATION / STRUCTURED QUERIES / BROWSER WORKFLOWS</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="920" viewBox="0 0 1200 920" role="img" aria-labelledby="title desc">
+<title id="title">同济校园助手 · 一句话，安排好校园日常</title>
+<desc id="desc">六个典型场景：查看 Canvas 作业与要求、预约图书馆座位、寻找多人研习室、分析培养计划学分、查询社会实践进度、获取官方电子文件。本机扫码登录，有效会话复用。</desc>
+<defs>
+  <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f3f5f1"/><stop offset="1" stop-color="#e8eeea"/></linearGradient>
+</defs>
+<rect width="1200" height="920" fill="url(#paper)"/>
+<path d="M905 0H1200V322H1126C1057 254 1017 176 905 136Z" fill="#e2eae5" opacity=".7"/>
+<g fill="none" stroke="#78948e" stroke-width="1.5" opacity=".56">
+ <path d="M930 272V144a65 65 0 0 1 130 0v128M910 272h170M917 145h156M947 272V162a48 48 0 0 1 96 0v110"/>
+ <path d="M995 207h94v-45h47" stroke-dasharray="4 7"/>
+ <circle cx="1136" cy="162" r="5" fill="#78948e" stroke="none"/>
+</g>
+<g font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif"><text x="64" y="61" font-family="Arial, sans-serif" font-size="17" font-weight="600" letter-spacing="3.6" fill="#647d78">TONGJI CAMPUS / AGENT SKILL</text>
+<text x="60" y="160" font-size="70" font-weight="600" letter-spacing="2" fill="#2d4350">同济校园助手</text>
+<text x="64" y="220" font-size="30" fill="#3e5a6b">一句话，安排好校园日常。</text>
+<text x="64" y="274" font-size="21" fill="#6c7e79">查作业、找座位、看学业进度，直接对 AI 助手说。</text>
+<path d="M64 322H1136" stroke="#c9d5cf"/>
+<text x="64" y="382" font-family="Arial, sans-serif" font-size="16" fill="#4d6b7a" opacity=".75">01</text><text x="102" y="382" font-size="20" font-weight="500" fill="#4d6b7a">CANVAS · 课程作业</text><text x="64" y="427" font-size="27" font-weight="500" fill="#2d4350">未来七天，有哪些作业要交？</text><text x="64" y="461" font-size="20" fill="#75847e">截止时间 · 提交状态 · 作业要求</text><text x="650" y="382" font-family="Arial, sans-serif" font-size="16" fill="#658274" opacity=".75">02</text><text x="688" y="382" font-size="20" font-weight="500" fill="#658274">图书馆 · 座位预约</text><text x="650" y="427" font-size="27" font-weight="500" fill="#2d4350">六楼有空位吗？帮我约到闭馆。</text><text x="650" y="461" font-size="20" fill="#75847e">普通座位 · 研修座位 · 考研座位</text><text x="64" y="546" font-family="Arial, sans-serif" font-size="16" fill="#658274" opacity=".75">03</text><text x="102" y="546" font-size="20" font-weight="500" fill="#658274">研习室 · 多人讨论</text><text x="64" y="591" font-size="27" font-weight="500" fill="#2d4350">明天下午，找间三人讨论室。</text><text x="64" y="625" font-size="20" fill="#75847e">按人数和时段，找到合适空间</text><text x="650" y="546" font-family="Arial, sans-serif" font-size="16" fill="#4d6b7a" opacity=".75">04</text><text x="688" y="546" font-size="20" font-weight="500" fill="#4d6b7a">培养计划 · 学分进度</text><text x="650" y="591" font-size="27" font-weight="500" fill="#2d4350">我的学分，还差在哪些类别？</text><text x="650" y="625" font-size="20" fill="#75847e">分类要求 · 已修学分 · 完成差额</text><text x="64" y="710" font-family="Arial, sans-serif" font-size="16" fill="#897a67" opacity=".75">05</text><text x="102" y="710" font-size="20" font-weight="500" fill="#897a67">社会实践 · 完成情况</text><text x="64" y="755" font-size="27" font-weight="500" fill="#2d4350">社会实践课完成了多少？</text><text x="64" y="789" font-size="20" fill="#75847e">学习进度 · 认定学时 · 课程成绩</text><text x="650" y="710" font-family="Arial, sans-serif" font-size="16" fill="#897a67" opacity=".75">06</text><text x="688" y="710" font-size="20" font-weight="500" fill="#897a67">官方文件 · 电子下载</text><text x="650" y="755" font-size="27" font-weight="500" fill="#2d4350">找到英文成绩单的下载入口。</text><text x="650" y="789" font-size="20" fill="#75847e">中英文成绩单 · 在读证明</text><path d="M64 838H1136" stroke="#c9d5cf"/>
+<g font-size="19" fill="#5f756c">
+ <circle cx="70" cy="879" r="4" fill="#829b88"/><text x="88" y="886">本机扫码登录</text>
+ <circle cx="451" cy="879" r="4" fill="#829b88"/><text x="469" y="886">有效会话复用</text>
+ <circle cx="846" cy="879" r="4" fill="#829b88"/><text x="864" y="886">一句话安装</text>
+</g>
+</g>
 </svg>
